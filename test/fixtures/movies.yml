@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  year: 1
+  plot: MyString
+  mpaa_rating: 1
+  rating: 1
+
+two:
+  title: MyString
+  year: 1
+  plot: MyString
+  mpaa_rating: 1
+  rating: 1
