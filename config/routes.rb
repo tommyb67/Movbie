@@ -2,8 +2,12 @@ RailsMovie::Application.routes.draw do
   get 'movies/search' => 'movies#search', as: 'search'
   get 'movies/saved' => 'movies#saved', as: 'saved'
 
-  get 'movies/:id/save' => 'movies#save_movie', as: 'save_movie'
-  get 'movies/:id/favorite' => 'movies#favorite_movie', as: 'favorite_movie'
+  post 'movies/:id/save' => 'movies#save_movie', as: 'save_movie'
+  post 'movies/:id/favorite' => 'movies#favorite_movie', as: 'favorite_movie'
+  get 'movie/:id' => 'movies#each_movie', as: 'each_movie'
+
+  post 'movie/:id/voteup' => 'movies#voteup', as: 'voteup'
+  post 'movie/:id/votedown' => 'movies#votedown', as: 'votedown'
 
   root :to => 'movies#index'
   resources :movies

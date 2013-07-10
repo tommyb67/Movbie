@@ -1,0 +1,15 @@
+<h3><%= @movie.title %></h3>
+<p>Release Date: <%= @movie.release_date %></p>
+<p> Director(s):
+  <% @movie.director.each do |director| %>
+    <%= director %>
+  <% end %>
+</p>
+<p>Plot: <%= @movie.plot %></p>
+<p>MPAA Rating: <%= @movie.mpaa_rating %></p>
+<p>
+  Movbie Rating: <%= @movie.rating %>
+  <%= link_to "<i class='icon-plus-sign'></i>".html_safe, voteup_path, method: 'post' %>
+  <%= link_to "<i class='icon-minus-sign'></i>".html_safe, votedown_path, method: 'post' %>
+</p>
+<div class="movie_poster"><%= image_tag(@movie.poster) %></div>
