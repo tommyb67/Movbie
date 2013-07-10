@@ -3,6 +3,7 @@ RailsMovie::Application.routes.draw do
   get 'movies/saved' => 'movies#saved', as: 'saved'
 
   get 'movies/:id/save' => 'movies#save_movie', as: 'save_movie'
+  get 'movies/:id/favorite' => 'movies#favorite_movie', as: 'favorite_movie'
 
   root :to => 'movies#index'
   resources :movies

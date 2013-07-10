@@ -1,6 +1,7 @@
 <h3><%= @movie.title %></h3>
 
 <%= button_to "Save", save_movie_path, class: 'btn btn-warning btn-small' %>
+<%= button_to "Favorite", favorite_movie_path, class: 'btn btn-warning btn-small' %>
 <p>Year: <%= @movie.year %></p>
 <p>Release Date: <%= @movie.release_date %></p>
 <p> Director(s):
