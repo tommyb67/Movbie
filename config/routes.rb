@@ -1,11 +1,11 @@
 RailsMovie::Application.routes.draw do
-  get "movies/index"
+  get 'movies/search' => 'movies#search', as: 'search'
+  get 'movies/saved' => 'movies#saved', as: 'saved'
 
-  get "movies/result"
+  get 'movies/:id/save' => 'movies#save_movie', as: 'save_movie'
 
-  get "movies/show"
-
-  get "movies/saved"
+  root :to => 'movies#index'
+  resources :movies
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

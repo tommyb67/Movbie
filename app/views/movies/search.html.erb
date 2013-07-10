@@ -1,0 +1,9 @@
+<h1>Movie Results</h1>
+
+<ul>
+  <% @movie_list.each do |movie| %>
+    <li>
+      <%= link_to movie.title, movie.id %>
+    </li>
+  <% end %>
+</ul>

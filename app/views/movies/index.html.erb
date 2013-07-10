@@ -1,2 +1,7 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>Rails Movie Collection</h1>
+
+<h3>Search a Movie</h3>
+<form action="/movies/search" method="get">
+  <input type="string" name="title" autofocus>
+  <button class="btn btn-info">Go!</button>
+</form>
