@@ -1,4 +1,8 @@
 RailsMovie::Application.routes.draw do
+  get "actors/index"
+
+  get "actors/show"
+
   get 'movies/search' => 'movies#search', as: 'search'
   get 'movies/saved' => 'movies#saved', as: 'saved'
 

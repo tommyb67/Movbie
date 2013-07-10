@@ -20,11 +20,17 @@ class MoviesController < ApplicationController
     new_movie.year = @movie.year
     new_movie.plot = @movie.plot
     new_movie.mpaa_rating = @movie.mpaa_rating
-    new_movie.rating = 50
     new_movie.poster = @movie.poster
     new_movie.director = @movie.director
     new_movie.release_date = @movie.release_date
+    new_movie.rating = 50
     new_movie.save
+
+    # Save all cast members into Actor table
+    @movie.cast_members.each do |actor|
+      new_actor = Actor.find_or_create(name: actor)
+      new_movie.actors << new_actor
+    end
 
     redirect_to saved_path
   end
@@ -37,10 +43,10 @@ class MoviesController < ApplicationController
     new_movie.year = @movie.year
     new_movie.plot = @movie.plot
     new_movie.mpaa_rating = @movie.mpaa_rating
-    new_movie.rating = 100
     new_movie.poster = @movie.poster
     new_movie.director = @movie.director
     new_movie.release_date = @movie.release_date
+    new_movie.rating = 100
     new_movie.save
 
     redirect_to saved_path
