@@ -6,6 +6,7 @@ RailsMovie::Application.routes.draw do
   post 'movies/:id/save' => 'movies#save_movie', as: 'save_movie'
   post 'movies/:id/favorite' => 'movies#favorite_movie', as: 'favorite_movie'
   get 'movie/:id' => 'movies#each_movie', as: 'each_movie'
+  get 'search_year' => 'movies#search_movie_by_year', as: 'search_movie_by_year'
 
   post 'movie/:id/voteup' => 'movies#voteup', as: 'voteup'
   post 'movie/:id/votedown' => 'movies#votedown', as: 'votedown'

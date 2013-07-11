@@ -82,4 +82,18 @@ class MoviesController < ApplicationController
     redirect_to each_movie_path
   end
 
+  def search_movie_by_year
+    @year = params[:year]
+    if @year
+      @movies_result = Movie.where(year: @year)
+      if @movies_result.length > 1 #this is working well for year that has more than 2 movies
+        @multiple_movies = @movies_result
+      elsif @movies_result.length > 0 # this is not working
+        @single_movie = @movies_result.first
+      else
+        @error = "Sorry, you don't have favorite movie in this year."
+      end
+    end
+  end
+
 end
