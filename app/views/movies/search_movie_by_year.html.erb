@@ -1,21 +1,23 @@
-<h3>Search Favorite Movies by Year</h3>
-
-<form action="/search_year" method="get">
-  <input type="string" name="year" autofocus>
-  <button class="btn btn-info">Go!</button>
-</form>
-
-<% if @year %>
-  <h4>All of Your Favorites</h4>
-  <% if @multiple_movies %>
-    <ul>
-      <% @multiple_movies.each do |movie| %>
-        <li><%= link_to movie.title, each_movie_path(movie) %></li>
-      <% end %>
-    </ul>
-  <% elsif @single_movie %>
-    <%= link_to @single_movie.title, each_movie_path(@single_movie.id) %>
-  <% else %>
-    <%= @error %>
+<div class="well">
+  <div class="center">
+    <h2>Search Favorite Movies by Year</h2>
+    <form action="/search_year" method="get">
+      <input type="string" name="year" autofocus>
+      <button class="btn btn-info">Go!</button>
+    </form>
+  </div>
+  <% if @year %>
+    <h4>List of All Your Favorites</h4>
+    <% if @multiple_movies %>
+      <ul>
+        <% @multiple_movies.each do |movie| %>
+          <li><%= link_to movie.title, each_movie_path(movie) %></li>
+        <% end %>
+      </ul>
+    <% elsif @single_movie %>
+      <%= link_to @single_movie.title, each_movie_path(@single_movie.id) %>
+    <% else %>
+      <%= @error %>
+    <% end %>
   <% end %>
-<% end %>
+</div>

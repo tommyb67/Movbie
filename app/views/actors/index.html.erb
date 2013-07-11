@@ -1,7 +1,8 @@
-<h1>All Actors (Sort by Name)</h1>
-
-<ul>
-<% @actors.each do |actor| %>
-  <li><a href="/actors/<%= actor.id %>"><%= actor.name %></a></li>
-<% end %>
-</ul>
+<div class="well">
+  <h1>All Actors (Sort by Name)</h1>
+  <ul class="list">
+  <% @actors.each do |actor| %>
+    <li><a href="/actors/<%= actor.id %>"><%= actor.name %></a></li>
+  <% end %>
+  </ul>
+</div>

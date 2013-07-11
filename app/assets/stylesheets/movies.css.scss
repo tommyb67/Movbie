@@ -5,8 +5,27 @@
 .movie_poster {
   width: 300px;
   height: auto;
+  margin-top: 10px;
 }
 
 a {
   text-decoration: none;
+}
+
+.nav {
+  margin: 10px auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.list {
+  li {
+  list-style: none;
+  display: inline-block;
+  }
+  li:last-child {
+
+  }
 }

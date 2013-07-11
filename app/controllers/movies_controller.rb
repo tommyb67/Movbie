@@ -3,12 +3,10 @@ class MoviesController < ApplicationController
   end
 
   def search
-    # @title = params[:title]
     @movie_list = Imdb::Search.new(params[:title]).movies[0..9]
   end
 
   def show
-    # movie_id = params[:id]
     @movie = Imdb::Movie.new(params[:id])
   end
 
@@ -82,6 +80,7 @@ class MoviesController < ApplicationController
     redirect_to each_movie_path
   end
 
+  # Search for movies by year, results only show up if there is user input
   def search_movie_by_year
     @year = params[:year]
     if @year
@@ -91,7 +90,7 @@ class MoviesController < ApplicationController
       elsif @movies_result.length > 0 # this is not working
         @single_movie = @movies_result.first
       else
-        @error = "Sorry, you don't have favorite movie in this year."
+        @error = "Sorry, you don't have any favorite movie in this year."
       end
     end
   end
