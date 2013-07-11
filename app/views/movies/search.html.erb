@@ -1,12 +1,10 @@
 <div class="well">
   <h1>Movie Results</h1>
   <div class="row-fluid">
-    <% @movie_list.each do |movie| %>
-        <div class="span3 movie_list">
-          <div class="movie_title">
-            <h5><%= link_to movie.title, movie.id %></h5>
-          </div>
-        </div>
-    <% end %>
+    <div class="span12">
+      <% @movie_list.each do |movie| %>
+        <h5><%= link_to movie.title, movie.id %></h5>
+      <% end %>
+    </div>
   </div>
 </div>

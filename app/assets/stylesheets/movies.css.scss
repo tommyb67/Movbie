@@ -19,13 +19,16 @@ a {
 /////Movies
 //Saved
 
-.row-fluid > .span3:nth-child(5) {
-  margin-left: 0;
+.row-fluid > .span3:nth-child(4n+5) {
+  clear: left;
+  margin-left: 0px;
 }
 
 .movie_list {
+  margin-top: 20px;
   padding-bottom: 16px;
   border-bottom: 1px solid #D8D8D8;
+  height: 400px;
 }
 
 .movie_title {
@@ -39,17 +42,16 @@ a {
   width: auto;
 }
 
-
+//Movie Page
 .movie_poster {
   width: 280px;
   height: auto;
   margin-top: 10px;
   img {
-    border: 10px solid #000;
+    border: 5px solid #000;
   }
 }
 
-//Movie Page
 .button {
   float: right;
   display: inline-block;
