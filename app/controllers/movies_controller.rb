@@ -28,7 +28,7 @@ class MoviesController < ApplicationController
 
     # Save all cast members into Actor table
     @movie.cast_members.each do |actor|
-      new_actor = Actor.find_or_create(name: actor)
+      new_actor = Actor.find_or_create_by_name(actor)
       new_movie.actors << new_actor
     end
 
@@ -48,6 +48,12 @@ class MoviesController < ApplicationController
     new_movie.release_date = @movie.release_date
     new_movie.rating = 100
     new_movie.save
+
+     # Save all cast members into Actor table
+    @movie.cast_members.each do |actor|
+      new_actor = Actor.find_or_create_by_name(actor)
+      new_movie.actors << new_actor
+    end
 
     redirect_to saved_path
   end
