@@ -2,8 +2,6 @@
   <h1>All Actors</h1>
   <h4>(Sort by First Name)</h4>
   <ul class="cast-list">
-  <% @actors.each do |actor| %>
-    <li><a href="/actors/<%= actor.id %>"><%= actor.name %></a></li>
-  <% end %>
+    <%= render @actors %>
   </ul>
 </div>
