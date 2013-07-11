@@ -12,7 +12,7 @@ There is a Movbie rating for each movie, and user can vote up and down.
 * Created form to search favorite movies by year.
 
 #### In Progress
-* Limit result to movies with poster, drop logic in controller to limit data extracting
+* Refactor search fav movie, drop a message if there is no fav movie in certain year
 * Refactor save and favorite to use a helper method, or pass in a parameter so only one action is needed
 
 #### More advance stuff if have time

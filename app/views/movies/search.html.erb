@@ -2,16 +2,11 @@
   <h1>Movie Results</h1>
   <div class="row-fluid">
     <% @movie_list.each do |movie| %>
-      <% if movie.poster %>
         <div class="span3 movie_list">
           <div class="movie_title">
             <h5><%= link_to movie.title, movie.id %></h5>
           </div>
-          <div class="movie_poster_thumbnail">
-            <%= image_tag(movie.poster) %>
-          </div>
         </div>
-      <% end %>
     <% end %>
   </div>
 </div>
