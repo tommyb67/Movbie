@@ -3,7 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /////Universal
+a {
+  text-decoration: none;
+}
 
+.nav {
+  margin: 10px auto;
+  font-size: 1.1em;
+}
+
+.center {
+  text-align: center;
+}
 
 /////Movies
 //Saved
@@ -38,18 +49,14 @@
   }
 }
 
-a {
-  text-decoration: none;
+//Movie Page
+.button {
+  float: right;
+  display: inline-block;
+  width: auto;
 }
 
-.nav {
-  margin: 10px auto;
-}
-
-.center {
-  text-align: center;
-}
-
+//Actors
 .cast-list {
   margin-left: 0;
   li {
@@ -62,10 +69,4 @@ a {
   li:last-child {
     border: 0;
   }
-}
-
-.button {
-  float: right;
-  display: inline-block;
-  width: auto;
 }
