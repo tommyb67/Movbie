@@ -1,8 +1,15 @@
 <div class="well">
   <h1>Saved Movies</h1>
-  <ul>
-  <% @saved_movies.each do |movie| %>
-    <li><a href="/movie/<%= movie.id %>"><%= movie.title %></a></li>
-  <% end %>
-  </ul>
+  <div class="row-fluid">
+    <% @saved_movies.each do |movie| %>
+      <div class="span3 movie_list">
+        <div class="movie_title">
+          <a href="/movie/<%= movie.id %>"><h5><%= movie.title %></h5></a>
+        </div>
+        <div class="movie_poster_thumbnail">
+          <%= image_tag(movie.poster) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

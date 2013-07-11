@@ -1,16 +1,22 @@
-<h3><%= @movie.title %></h3>
-
-<%= button_to "Save", save_movie_path, class: 'btn btn-warning btn-small' %>
-<%= button_to "Favorite", favorite_movie_path, class: 'btn btn-warning btn-small' %>
-<p>Year: <%= @movie.year %></p>
-<p>Release Date: <%= @movie.release_date %></p>
-<p> Director(s):
-  <% @movie.director.each do |director| %>
-    <%= director %>
-  <% end %>
-</p>
-<p>Plot: <%= @movie.plot %></p>
-<p>MPAA Rating: <%= @movie.mpaa_rating %></p>
-<p>Rating: <%= @movie.rating %></p>
-<div class="movie_poster"><%= image_tag(@movie.poster) %></div>
-
+<div class="row-fluid">
+  <div class="span4">
+    <div class="movie_poster"><%= image_tag(@movie.poster) %></div>
+  </div>
+  <div class="span8">
+    <div class="button">
+      <%= button_to "Save", save_movie_path, class: 'btn btn-warning btn-small' %>
+      <%= button_to "Favorite", favorite_movie_path, class: 'btn btn-warning btn-small' %>
+    </div>
+    <h3><%= @movie.title %></h3>
+    <p>Year: <%= @movie.year %></p>
+    <p>Release Date: <%= @movie.release_date %></p>
+    <p> Director(s):
+      <% @movie.director.each do |director| %>
+        <%= director %>
+      <% end %>
+    </p>
+    <p>Plot: <%= @movie.plot %></p>
+    <p>MPAA Rating: <%= @movie.mpaa_rating %></p>
+    <p>Rating: <%= @movie.rating %></p>
+  </div>
+</div>

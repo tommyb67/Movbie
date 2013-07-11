@@ -19,8 +19,10 @@
       <%= link_to "<i class='icon-minus-sign'></i>".html_safe, votedown_path, method: 'post' %>
     </p>
 
+    <ul class="cast-list">
     <h4>Cast List:</h4>
     <% @movie.actors.each do |actor| %>
-      <%= link_to actor.name, actor_path(actor) %> |
+      <li><%= link_to actor.name, actor_path(actor) %></li>
     <% end %>
+    </ul>
   </div>

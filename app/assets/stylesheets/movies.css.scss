@@ -2,10 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/////Universal
+
+
+/////Movies
+//Saved
+
+.row-fluid > .span3:nth-child(5) {
+  margin-left: 0;
+}
+
+.movie_list {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.movie_title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.movie_poster_thumbnail img{
+  height: 300px;
+  width: auto;
+}
+
+
 .movie_poster {
-  width: 300px;
+  width: 280px;
   height: auto;
   margin-top: 10px;
+  img {
+    border: 10px solid #000;
+  }
 }
 
 a {
@@ -20,12 +50,22 @@ a {
   text-align: center;
 }
 
-.list {
+.cast-list {
+  margin-left: 0;
   li {
   list-style: none;
   display: inline-block;
+  margin-left: 6px;
+  padding-right: 6px;
+  border-right: 1px solid #D8D8D8;
   }
   li:last-child {
-
+    border: 0;
   }
+}
+
+.button {
+  float: right;
+  display: inline-block;
+  width: auto;
 }

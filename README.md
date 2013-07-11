@@ -12,3 +12,5 @@ Created vote up and down for Movbie rating.
 Created form to search favorite movies by year.
 
 #### In Progress
+Implement Flickr API to get actors' picture
+Create a manual rotate box on index page to display movies and actors (without front-end script)
