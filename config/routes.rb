@@ -1,7 +1,4 @@
 RailsMovie::Application.routes.draw do
-  get "actors/index"
-
-  get "actors/show"
 
   get 'movies/search' => 'movies#search', as: 'search'
   get 'movies/saved' => 'movies#saved', as: 'saved'
@@ -12,6 +9,9 @@ RailsMovie::Application.routes.draw do
 
   post 'movie/:id/voteup' => 'movies#voteup', as: 'voteup'
   post 'movie/:id/votedown' => 'movies#votedown', as: 'votedown'
+
+  get 'actors' => 'actors#index', as: 'actors'
+  get 'actors/:id' => 'actors#show', as: 'actor'
 
   root :to => 'movies#index'
   resources :movies
