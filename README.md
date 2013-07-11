@@ -14,5 +14,7 @@ There is a Movbie rating for each movie, and user can vote up and down.
 #### In Progress
 * Limit result to movies with poster, drop logic in controller to limit data extracting
 * Refactor save and favorite to use a helper method, or pass in a parameter so only one action is needed
+
+#### More advance stuff if have time
 * Implement Flickr API to get actors' picture
 * Create a manual rotate box on index page to display movies and actors (without front-end script)
