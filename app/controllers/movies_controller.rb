@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
   def search
     # @title = params[:title]
-    @movie_list = Imdb::Search.new(params[:title]).movies
+    @movie_list = Imdb::Search.new(params[:title]).movies[0..9]
   end
 
   def show
