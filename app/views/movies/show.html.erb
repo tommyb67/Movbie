@@ -5,7 +5,7 @@
   <div class="span8">
     <div class="button">
       <%= button_to "Save", save_movie_path, class: 'btn btn-warning btn-small' %>
-      <%= button_to "Favorite", favorite_movie_path, class: 'btn btn-warning btn-small' %>
+      <%= button_to "Favorite", save_movie_path(fav: true), class: 'btn btn-warning btn-small' %>
     </div>
     <h3><%= @movie.title %></h3>
     <p>Year: <%= @movie.year %></p>

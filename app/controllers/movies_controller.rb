@@ -21,33 +21,10 @@ class MoviesController < ApplicationController
     new_movie.poster = @movie.poster
     new_movie.director = @movie.director
     new_movie.release_date = @movie.release_date
-    new_movie.rating = 50
+    new_movie.rating = 100 if params[:fav]
     new_movie.save
 
     # Save all cast members into Actor table
-    @movie.cast_members[0..9].each do |actor|
-      new_actor = Actor.find_or_create_by_name(actor)
-      new_movie.actors << new_actor
-    end
-
-    redirect_to saved_path
-  end
-
-  def favorite_movie
-    @movie = Imdb::Movie.new(params[:id])
-    new_movie = Movie.new
-    new_movie.title = @movie.title
-    new_movie.imdb_id = @movie.id
-    new_movie.year = @movie.year
-    new_movie.plot = @movie.plot
-    new_movie.mpaa_rating = @movie.mpaa_rating
-    new_movie.poster = @movie.poster
-    new_movie.director = @movie.director
-    new_movie.release_date = @movie.release_date
-    new_movie.rating = 100
-    new_movie.save
-
-     # Save all cast members into Actor table
     @movie.cast_members[0..9].each do |actor|
       new_actor = Actor.find_or_create_by_name(actor)
       new_movie.actors << new_actor
@@ -61,7 +38,7 @@ class MoviesController < ApplicationController
   end
 
   def saved
-    @saved_movies = Movie.all
+    @saved_movies = Movie.order('rating desc')
   end
 
   def voteup

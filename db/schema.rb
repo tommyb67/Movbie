@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(:version => 20130710231407) do
     t.integer  "year"
     t.string   "plot"
     t.integer  "mpaa_rating"
-    t.integer  "rating"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "rating",       :default => 50
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.string   "poster"
     t.string   "director"
     t.string   "release_date"
