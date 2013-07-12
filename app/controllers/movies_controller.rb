@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     @movie = Imdb::Movie.new(params[:id])
     new_movie = Movie.create(title: @movie.title, imdb_id: @movie.id, year: @movie.year, plot: @movie.plot,
                              mpaa_rating: @movie.mpaa_rating, poster: @movie.poster, director: @movie.director,
-                             release_date: @movie.release_date)
+                             release_date: @movie.release_date, length: @movie.length)
     new_movie.rating = 100 if params[:fav]
     new_movie.save
 

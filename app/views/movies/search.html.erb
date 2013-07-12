@@ -1,9 +1,10 @@
 <div class="well">
-  <h1>Movie Results</h1>
+  <h1>Movie Results (<%= @movie_list.count %>)</h1>
   <div class="row-fluid">
     <div class="span12">
       <% @movie_list.each do |movie| %>
         <h5><%= link_to movie.title, movie.id %></h5>
+        <p><%= truncate movie.plot, length: 100, separator: ' ' %></p>
       <% end %>
     </div>
   </div>

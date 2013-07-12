@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710231407) do
+ActiveRecord::Schema.define(:version => 20130712145849) do
 
   create_table "actors", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20130710231407) do
     t.string   "director"
     t.string   "release_date"
     t.integer  "imdb_id"
+    t.integer  "length"
   end
 
 end

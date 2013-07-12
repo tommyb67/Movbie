@@ -12,9 +12,10 @@
       <% end %>
     </p>
     <p>Plot: <%= @movie.plot %></p>
+    <p>Length: <%= movie_length %></p>
     <p>MPAA Rating: <%= @movie.mpaa_rating %></p>
     <p>
-      Movbie Rating: <%= @movie.rating %>
+      Movbie Rating: <%= number_to_percentage @movie.rating, precision: 0 %>
       <%= vote_up_button %>
       <%= vote_down_button %>
     </p>
@@ -26,5 +27,6 @@
       <% end %>
     </ul>
 
-    <p>Added: <%= movie_added_time %></p>
+    <p>Added: <%= movie_added_time %> ago</p>
+    <p>Last voted: <%= movie_last_voted_time %> ago</p>
   </div>
