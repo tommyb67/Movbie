@@ -15,8 +15,12 @@
     <p>MPAA Rating: <%= @movie.mpaa_rating %></p>
     <p>
       Movbie Rating: <%= @movie.rating %>
-      <%= link_to "<i class='icon-plus-sign'></i>".html_safe, voteup_path, method: 'post' %>
-      <%= link_to "<i class='icon-minus-sign'></i>".html_safe, votedown_path, method: 'post' %>
+      <% unless @movie.rating > 99 %>
+        <%= link_to "<i class='icon-plus-sign'></i>".html_safe, voteup_path, method: 'post' %>
+      <% end %>
+      <% unless @movie.rating < 1 %>
+        <%= link_to "<i class='icon-minus-sign'></i>".html_safe, votedown_path, method: 'post' %>
+      <% end %>
     </p>
 
     <ul class="cast-list">

@@ -12,9 +12,7 @@ There is a Movbie rating for each movie, and user can vote up and down.
 * Created form to search favorite movies by year.
 
 #### In Progress
-* Add favorite boolean col to Movie
 * Refactor search fav movie, drop a message if there is no fav movie in certain year
-* Refactor save and favorite to use a helper method, or pass in a parameter so only one action is needed, either pass in rating param or set fav to false/true
 
 #### More advance stuff if have time
 * Implement Flickr API to get actors' picture

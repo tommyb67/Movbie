@@ -19,8 +19,8 @@ class MoviesController < ApplicationController
     new_movie.save
 
     # Save all cast members into Actor table
-    @movie.cast_members[0..9].each do |actor|
-      new_actor = Actor.find_or_create_by_name(actor)
+    @movie.cast_members[0..9].each do |name|
+      new_actor = Actor.find_or_create_by_name(name)
       new_movie.actors << new_actor
     end
 
