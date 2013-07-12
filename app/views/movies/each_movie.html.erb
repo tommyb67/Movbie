@@ -20,9 +20,11 @@
     </p>
 
     <ul class="cast-list">
-    <h4>Cast List:</h4>
-    <% @movie.actors.each do |actor| %>
-      <li><%= link_to actor.name, actor_path(actor) %></li>
-    <% end %>
+      <h4>Cast List:</h4>
+      <% @movie.actors.each do |actor| %>
+        <li><%= link_to actor.name, actor_path(actor) %></li>
+      <% end %>
     </ul>
+
+    <p>Added: <%= movie_added_time %></p>
   </div>

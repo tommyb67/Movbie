@@ -10,4 +10,8 @@ module MoviesHelper
       link_to "<i class='icon-minus-sign'></i>".html_safe, votedown_path, method: 'post'
     end
   end
+
+  def movie_added_time
+    distance_of_time_in_words @movie.created_at, Time.now
+  end
 end
